@@ -45,6 +45,11 @@ function handleSessionHelpRequest(callback) {
   callback({}, helpers.buildSpeechletResponse(cardTitle, speechOutput, null, shouldEndSession));
 }
 
+function parseTweet (tweet) {
+  if (tweet.indexOf('http://') === -1 && tweet.indexOf('https://') === -1) return tweet;
+  return tweet.substring(0, tweet.indexOf('http://'))
+}
+
 /**
  * Sets the color in the session and prepares the speech to reply to the user.
  */
@@ -64,6 +69,8 @@ function getLatestEminemTweet(intent, session, callback) {
         speechOutput = messages.invalidIntent;
       }
       speechOutput = tweets[0].content;
+      const resp = parseTweet(speechOutput);
+      speechOutput = resp.length ? resp : 'Not able to fetch tweet. Please try again later';
       alexaLogger.logInfo(`Recieved data for sessionId=${session.sessionId}: ${speechOutput}`);
       callback(sessionAttributes,
           helpers.buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
