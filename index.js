@@ -40,7 +40,7 @@ function handleSessionHelpRequest(callback) {
   const cardTitle = 'Session help';
   const speechOutput = messages.helpMessage;
   // Setting this to true ends the session and exits the skill.
-  const shouldEndSession = true;
+  const shouldEndSession = false;
 
   callback({}, helpers.buildSpeechletResponse(cardTitle, speechOutput, null, shouldEndSession));
 }
@@ -57,7 +57,7 @@ function getLatestEminemTweet(intent, session, callback) {
   const cardTitle = 'Latest tweet of Eminem';
   let repromptText = '';
   let sessionAttributes = {};
-  const shouldEndSession = false;
+  const shouldEndSession = true;
   latestTweets('eminem', (err, tweets) => {
       let speechOutput
       if (err) {
