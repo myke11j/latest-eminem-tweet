@@ -4,7 +4,9 @@
   "description": "Get latest tweet from @Eminem",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "dev": "node-lambdar un",
+    "deploy": "node-lambda deploy"
   },
   "repository": {
     "type": "git",
