@@ -1,0 +1,27 @@
+{
+  "name": "latest-eminem-tweet",
+  "version": "1.0.0",
+  "description": "Get latest tweet from @Eminem",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myke11j/latest-eminem-tweet.git"
+  },
+  "keywords": [
+    "eminem",
+    "twitter",
+    "latest-tweet"
+  ],
+  "author": "Mukul <@mukul1904>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/myke11j/latest-eminem-tweet/issues"
+  },
+  "homepage": "https://github.com/myke11j/latest-eminem-tweet#readme",
+  "dependencies": {
+    "latest-tweets": "^1.0.3"
+  }
+}
