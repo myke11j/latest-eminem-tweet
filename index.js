@@ -28,7 +28,7 @@ function getWelcomeResponse(callback) {
 }
 
 function handleSessionEndRequest(callback) {
-  const cardTitle = 'Session Ended';
+  const cardTitle = 'Latest tweet of Eminem exited';
   const speechOutput = messages.goodByeMessgae;
   // Setting this to true ends the session and exits the skill.
   const shouldEndSession = true;
@@ -37,7 +37,7 @@ function handleSessionEndRequest(callback) {
 }
 
 function handleSessionHelpRequest(callback) {
-  const cardTitle = 'Session help';
+  const cardTitle = 'Latest tweet of Eminem help';
   const speechOutput = messages.helpMessage;
   // Setting this to true ends the session and exits the skill.
   const shouldEndSession = false;
