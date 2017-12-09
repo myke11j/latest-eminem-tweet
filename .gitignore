@@ -59,3 +59,5 @@ typings/
 
 event.json
 deploy.env
+
+.lambda

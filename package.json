@@ -24,6 +24,8 @@
   },
   "homepage": "https://github.com/myke11j/latest-eminem-tweet#readme",
   "dependencies": {
-    "latest-tweets": "^1.0.3"
+    "latest-tweets": "^1.0.3",
+    "winston": "^2.4.0",
+    "winston-papertrail": "^1.0.5"
   }
 }
